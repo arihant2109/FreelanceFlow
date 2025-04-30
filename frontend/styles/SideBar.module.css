@@ -1,0 +1,23 @@
+.sideBar-container {
+    display: flex;
+    flex-direction: column; /* Add this to make sure it's vertical */
+    background-color: black;
+    color: white;
+    width: 18vw; /* Use vw for responsive width */
+    padding: 20px;
+    position: absolute; /* Fix the sidebar to the left */
+    top: 80px; /* Assuming header is 80px high */
+    left: 0;
+    height: 100dvh;
+    overflow-y: auto; /* Scroll if content overflows */
+}
+
+.list-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 1.1em;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

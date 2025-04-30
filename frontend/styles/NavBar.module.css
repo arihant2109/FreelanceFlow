@@ -1,0 +1,29 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: black;
+}
+
+.logo{
+    color:white;
+    font-weight: 800;
+    font-size: 1.3em;
+}
+.auth-buttons{
+    display: flex;
+    justify-content: space-around;
+    width: 20%;
+}
+
+.loginButton,.singnupButton {
+    border: 1px solid black;
+    width: 40%;
+    height: 2.5em;
+    border-radius: 8px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    
+}
