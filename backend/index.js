@@ -11,7 +11,7 @@ const app = express();
 const server = http.createServer(app);
 app.use(
   cors({
-    origin: "*", // Allow requests from any origin
+    origin: "*", 
     methods: ["GET", "POST", "PUT", "DELETE"],
     allowedHeaders: ["Content-Type","Authorization"],
   })
@@ -22,11 +22,10 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-// Use API routes
 
 app.use("/", api);
 
-// Start the server
+
 server.listen(config.serverPort, () => {
   console.log(`Server is running on port ${config.serverPort}`);
 });
