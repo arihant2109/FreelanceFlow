@@ -1,5 +1,7 @@
 // components/Dashboard.tsx
 import Link from "next/link";
+import NavBar from "@/components/NavBar";
+import SideBar from "@/components/SideBar";
 export default function Dashboard() {
     const stats = [
       { label: "Active Projects", value: 4 },
@@ -47,9 +49,9 @@ export default function Dashboard() {
     ];
   
     return (
-      <div className="p-6 ml-[18%]">
+      <><NavBar /><SideBar /><div className="p-6 ml-[18%]">
         <h1 className="text-2xl font-semibold mb-6">Dashboard</h1>
-  
+
         {/* Stats */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10">
           {stats.map((s, i) => (
@@ -59,7 +61,7 @@ export default function Dashboard() {
             </div>
           ))}
         </div>
-  
+
         {/* Projects Table */}
         <div className="bg-white rounded-lg shadow p-4 mb-8">
           <div className="flex justify-between items-center mb-4">
@@ -91,7 +93,7 @@ export default function Dashboard() {
             </tbody>
           </table>
         </div>
-  
+
         {/* Recent Activity */}
         <div className="bg-white rounded-lg shadow p-4">
           <div className="flex justify-between items-center mb-4">
@@ -107,7 +109,7 @@ export default function Dashboard() {
             ))}
           </ul>
         </div>
-      </div>
+      </div></>
     );
   }
   
