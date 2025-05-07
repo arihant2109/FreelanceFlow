@@ -1,6 +1,6 @@
-import { addClientController } from "../controllers/clientController";
-import { addProjectController } from "../controllers/projectController";
-import { addUserController } from "../controllers/userController";
+import { addClientController } from "../controllers/clientController.js";
+import { addProjectController } from "../controllers/projectController.js";
+import { addUserController } from "../controllers/userController.js";
 import express from 'express';
 
 const router = express.Router();

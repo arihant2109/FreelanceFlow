@@ -1,5 +1,7 @@
 // components/Clients.tsx
-
+import NavBar from "@/components/NavBar";
+import SideBar from "@/components/SideBar";
+import Link from "next/link";
 export default function Clients() {
     const clients = [
       {
@@ -24,13 +26,18 @@ export default function Clients() {
       },
     ];
   
+    const fetchClients =async()=>{
+      const client = fetch(`${process.env.NEXT_PUBLIC_BASE_API_URL}`)
+    }
+
     return (
       <div className="p-6 ml-[18%]">
         <div className="flex justify-between items-center mb-6">
           <h1 className="text-2xl font-semibold">Clients</h1>
+          <Link href='/newClient'>
           <button className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 text-sm font-medium">
             + New Client
-          </button>
+          </button></Link>
         </div>
   
         <div className="bg-white rounded-lg shadow overflow-hidden">

@@ -1,9 +1,10 @@
-import { addClient } from "../services/client";
+import { addClient } from "../services/client.js";
 
 
 export const addClientController =async (req,res)=>{
     try{
-        const response = await addClient();
+        console.log(req.body)
+        const response = await addClient(req.body);
         if(response){
             res.status(200).json({data:response});
         }

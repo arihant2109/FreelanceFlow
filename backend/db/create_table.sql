@@ -20,7 +20,7 @@ CREATE TABLE projects (
   id SERIAL PRIMARY KEY,
   user_id INTEGER REFERENCES users(id) ON DELETE CASCADE,
   client_id INTEGER REFERENCES clients(id) ON DELETE SET NULL,
-  title VARCHAR(200) NOT NULL,
+	  title VARCHAR(200) NOT NULL,
   description TEXT,
   status VARCHAR(20) CHECK (status IN ('active', 'completed')) DEFAULT 'active',
   start_date DATE,
