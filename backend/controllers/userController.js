@@ -3,7 +3,7 @@ import { addUser} from "../services/user.js";
 
 export const addUserController = async(req,res)=>{
     try{
-        const response =await addUser();
+        const response =await addUser(req.body);
         if(response){
             res.status(200).json({data:response});
         }
