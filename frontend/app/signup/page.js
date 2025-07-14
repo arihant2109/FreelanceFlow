@@ -30,7 +30,7 @@ export default function SignupForm() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/signup', {
+      const response = await fetch('http://localhost:5000/addUser', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

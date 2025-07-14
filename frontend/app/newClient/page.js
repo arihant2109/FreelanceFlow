@@ -4,7 +4,7 @@ import NavBar from '@/components/NavBar';
 import SideBar from '@/components/SideBar';
 const CustomerForm = () => {
   const [formData, setFormData] = useState({
-    user_id: 10,
+    user_id: 8,
     name: '',
     email: '',
     company: '',

@@ -6,7 +6,6 @@ const Home = () => {
   const router = useRouter()
 
 
-    router.push("/dashboard")
   
   return <div></div>
 }

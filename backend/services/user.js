@@ -1,10 +1,12 @@
 import pool from '../db/index.js';
 
 
-export const addUser = async(req,res)=>{
+export const addUser = async(body)=>{
 
-    const {name,email,password_hash,role,profile_image}=req.body
-    const values = [name,email,password_hash,role,profile_image]
+    const role='freelancer';
+    const profile_image=null;
+    const {name,email,password}=body
+    const values = [name,email,password,role,profile_image]
 
     try{
         const users = await pool.query("INSERT INTO users(name,email,password_hash,role,profile_image) VALUES ($1, $2, $3, $4, $5)",values);

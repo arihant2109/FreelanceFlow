@@ -4,9 +4,6 @@ import pool from '../db/index.js';
 export const addClient = async(body)=>{
 
     console.log("client service",body);
-
-
-
     const {user_id,name,email,company,phone}=body
     const values = [user_id,name,email,company,phone]
 
@@ -32,5 +29,21 @@ export const addClient = async(body)=>{
 }
 
 
+export const fetchClients = async()=>{
+    try{
+        const response = await pool.query('SELECT * FROM clients',[]);
+        return{
+            status:200,
+            success:true,
+            data:response.rows
+        }
 
 
+    }catch(error){
+        return{
+            status:500,
+            success:false,
+            data:error
+        }
+    }
+}

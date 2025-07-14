@@ -1,5 +1,6 @@
 "use client";
-
+import NavBar from "@/components/NavBar";
+import SideBar from "@/components/SideBar";
 import { useParams } from "next/navigation";
 import { useState } from "react";
 
@@ -28,20 +29,19 @@ export default function ProjectDetail() {
   };
 
   return (
-    <div className="p-6 ml-[18%]">
+    <><NavBar /><SideBar /><div className="p-6 ml-[18%]">
       <h1 className="text-2xl font-bold mb-4">Project #{id}</h1>
 
       {/* Task Creation */}
       <div className="mb-6">
         <h2 className="text-lg font-semibold">Add Task</h2>
-        <div className="flex gap-2 mt-2">   
+        <div className="flex gap-2 mt-2">
           <input
             type="text"
             placeholder="Enter new task"
             className="border rounded px-3 py-2 w-full"
             value={newTask}
-            onChange={(e) => setNewTask(e.target.value)}
-          />
+            onChange={(e) => setNewTask(e.target.value)} />
           <button
             onClick={handleAddTask}
             className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
@@ -71,9 +71,7 @@ export default function ProjectDetail() {
                   <label className="text-sm">Status:</label>
                   <select
                     value={task.status}
-                    onChange={(e) =>
-                      updateTaskStatus(i, e.target.value)
-                    }
+                    onChange={(e) => updateTaskStatus(i, e.target.value)}
                     className="border px-2 py-1 rounded text-sm"
                   >
                     <option>Not Started</option>
@@ -86,6 +84,6 @@ export default function ProjectDetail() {
           </ul>
         )}
       </div>
-    </div>
+    </div></>
   );
 }

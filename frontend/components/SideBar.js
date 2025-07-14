@@ -9,7 +9,8 @@ const SideBar = () => {
        <Link href="/clients"><li>Clients</li></Link> 
        <Link href="/projects"><li>Projects</li></Link> 
        <Link href="#"><li>Invoices</li></Link> 
-       <Link href="#"><li>Payments</li></Link> 
+       <Link href="#"><li>Payments</li></Link>
+       <Link href="/prompt"><li>Prompt</li></Link>  
        <Link href="#"><li>Settings</li></Link>         
       </ul>
     </div>
